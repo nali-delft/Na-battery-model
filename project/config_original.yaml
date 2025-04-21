@@ -1,0 +1,81 @@
+
+max_hours:
+  battery1: 1
+  battery2: 2
+  battery4: 4
+  battery8: 8
+  IronAir: 100
+
+investment_store:
+  battery1: 222.39
+  battery2: 219.61
+  battery4: 214.05
+  battery8: 212.15
+  IronAir: 20 #Euro/kWh
+
+investment_bicharger:
+  battery1: 73.05 #Euro/kW
+  battery2: 73.05
+  battery4: 73.05
+  battery8: 73.05
+  IronAir: 1.65 
+
+FOM_store:
+  battery1: 0.85 # FOM costs are in %, should divide 100 in the calculation
+  battery2: 1.27
+  battery4: 2.14
+  battery8: 4.87
+  IronAir: 2.5 
+
+FOM_bicharger:
+  battery1: 0.0  # FOM costs are in %, should divide 100 in the calculation
+  battery2: 0.0
+  battery4: 0.0
+  battery8: 0.0
+  IronAir: 0.3
+
+
+lifetime_store:
+  battery1: 16 # years
+  battery2: 16
+  battery4: 16
+  battery8: 16
+  IronAir: 20
+
+lifetime_bicharger:
+  battery1: 16 # years
+  battery2: 16
+  battery4: 16
+  battery8: 16
+  IronAir: 10
+
+
+RTE_efficiency:
+  battery1: 0.83 # in %, in the calculation, it is assumed that charge efficiency = discharge efficiency = sqrt(RTE_efficiency)
+  battery2: 0.83
+  battery4: 0.83
+  battery8: 0.83
+  IronAir: 0.5   #change this one
+
+snapshots:
+  start: "2020-01-01"
+  end: "2020-12-31"
+
+discount_rate:
+  0.0
+
+general:
+  nTimesteps: 8784 #35064 #41735 # 166940/4
+
+wind:
+  investment: 1000 #Euro/kW
+  FOM: 1.9495 # in %, should divide 100 in the calculation
+  lifetime: 25 # years
+  VOM: 0.0106  #Euro/MW， should divide 1000 in the calculation since the other units are in euro/kW
+
+# battery_size:
+#   IronAir: 61
+#   battery1: 61
+#   battery2: 61
+#   battery4: 61
+#   battery8: 61

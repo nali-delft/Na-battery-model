@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Battery Config</title>
+</head>
+
+
+<body>
+    <!-- <h1 style="color: red;">✅ 当前加载的是新版表单 HTML</h1> -->
+    <h2>Battery Input Parameters</h2>
+    <form id="configForm">
+
+        <h3>Duration</h3>
+        battery1: <input type="number" name="max_hours.battery1" step="0.01" value="1"><br>
+        battery2: <input type="number" name="max_hours.battery2" step="0.01" value="2"><br>
+        battery4: <input type="number" name="max_hours.battery4" step="0.01" value="4"><br>
+        battery8: <input type="number" name="max_hours.battery8" step="0.01" value="8"><br>
+        IronAir: <input type="number" name="max_hours.IronAir" step="0.01" value="100"><br>
+
+        <h3>Investment Store (€/kWh)</h3>
+        battery1: <input type="number" name="investment_store.battery1" step="0.01" value="222.39"><br>
+        battery2: <input type="number" name="investment_store.battery2" step="0.01" value="219.61"><br>
+        battery4: <input type="number" name="investment_store.battery4" step="0.01" value="214.05"><br>
+        battery8: <input type="number" name="investment_store.battery8" step="0.01" value="212.15"><br>
+        IronAir: <input type="number" name="investment_store.IronAir" step="0.01" value="20"><br>
+        
+        <h3>Investment BiCharger (€/kW)</h3>
+        battery1: <input type="number" name="investment_bicharger.battery1" step="0.01" value="73.05"><br>
+        battery2: <input type="number" name="investment_bicharger.battery2" step="0.01" value="73.05"><br>
+        battery4: <input type="number" name="investment_bicharger.battery4" step="0.01" value="73.05"><br>
+        battery8: <input type="number" name="investment_bicharger.battery8" step="0.01" value="73.05"><br>
+        IronAir: <input type="number" name="investment_bicharger.IronAir" step="0.01" value="1.65"><br>
+        
+        <h3>FOM Store (%)</h3>
+        battery1: <input type="number" name="FOM_store.battery1" step="0.01" value="0.85"><br>
+        battery2: <input type="number" name="FOM_store.battery2" step="0.01" value="1.27"><br>
+        battery4: <input type="number" name="FOM_store.battery4" step="0.01" value="2.14"><br>
+        battery8: <input type="number" name="FOM_store.battery8" step="0.01" value="4.87"><br>
+        IronAir: <input type="number" name="FOM_store.IronAir" step="0.01" value="2.5"><br>
+        
+        <h3>FOM BiCharger (%)</h3>
+        battery1: <input type="number" name="FOM_bicharger.battery1" step="0.01" value="0"><br>
+        battery2: <input type="number" name="FOM_bicharger.battery2" step="0.01" value="0"><br>
+        battery4: <input type="number" name="FOM_bicharger.battery4" step="0.01" value="0"><br>
+        battery8: <input type="number" name="FOM_bicharger.battery8" step="0.01" value="0"><br>
+        IronAir: <input type="number" name="FOM_bicharger.IronAir" step="0.01" value="0.3"><br>
+        
+        <h3>Lifetime Store (years)</h3>
+        battery1: <input type="number" name="lifetime_store.battery1" step="0.01" value="16"><br>
+        battery2: <input type="number" name="lifetime_store.battery2" step="0.01" value="16"><br>
+        battery4: <input type="number" name="lifetime_store.battery4" step="0.01" value="16"><br>
+        battery8: <input type="number" name="lifetime_store.battery8" step="0.01" value="16"><br>
+        IronAir: <input type="number" name="lifetime_store.IronAir" step="0.01" value="20"><br>
+        
+        <h3>Lifetime BiCharger (years)</h3>
+        battery1: <input type="number" name="lifetime_bicharger.battery1" step="0.01" value="16"><br>
+        battery2: <input type="number" name="lifetime_bicharger.battery2" step="0.01" value="16"><br>
+        battery4: <input type="number" name="lifetime_bicharger.battery4" step="0.01" value="16"><br>
+        battery8: <input type="number" name="lifetime_bicharger.battery8" step="0.01" value="16"><br>
+        IronAir: <input type="number" name="lifetime_bicharger.IronAir" step="0.01" value="10"><br>
+        
+        <h3>Round-trip Efficiency</h3>
+        battery1: <input type="number" name="RTE_efficiency.battery1" step="0.01" value="0.83"><br>
+        battery2: <input type="number" name="RTE_efficiency.battery2" step="0.01" value="0.83"><br>
+        battery4: <input type="number" name="RTE_efficiency.battery4" step="0.01" value="0.83"><br>
+        battery8: <input type="number" name="RTE_efficiency.battery8" step="0.01" value="0.83"><br>
+        IronAir: <input type="number" name="RTE_efficiency.IronAir" step="0.01" value="0.5"><br>
+        
+
+        <h3>Snapshots</h3>
+        Start: <input type="text" name="snapshots.start" value="2023-01-01"><br>
+        End: <input type="text" name="snapshots.end" value="2023-12-31"><br>
+        
+    
+        <h3>Discount Rate</h3>
+        <input type="number" name="discount_rate" step="0.01" value="0.0"><br>
+
+
+        <h3>General</h3>
+        Timesteps: <input type="number" name="general.nTimesteps" value="8760"><br>
+
+        <h3>Battery Size</h3>
+        battery1: <input type="number" name="battery_size.battery1" value="50.0" step="0.01"><br>
+        battery2: <input type="number" name="battery_size.battery2" value="50.0" step="0.01"><br>
+        battery4: <input type="number" name="battery_size.battery4" value="50.0" step="0.01"><br>
+        battery8: <input type="number" name="battery_size.battery8" value="50.0" step="0.01"><br>
+        IronAir: <input type="number" name="battery_size.IronAir" value="50.0" step="0.01"><br>
+
+        
+        <h3>Wind</h3>
+        Investment (€/kW): <input type="number" name="wind.investment" step="0.01" value="1000"><br>
+        FOM (%): <input type="number" name="wind.FOM" step="0.01" value="1.9495"><br>
+        Lifetime (years): <input type="number" name="wind.lifetime" value="25"><br>
+        VOM (€/MW): <input type="number" name="wind.VOM" step="0.01" value="0.0106"><br>
+
+
+        <br>
+        <button type="submit">Submit & Run</button>
+    </form>
+
+    <br>
+    <button onclick="window.location.href='/download'">Download results</button>
+    
+
+    <!-- <br>  -->
+    <!-- <button type="button" onclick="viewConfig()">查看当前配置</button> -->
+
+    <!-- <!-- ✅ 加上这个输出容器 -->
+    <h3>Output:</h3>
+    <pre id="results"></pre>
+
+    <script>
+        document.getElementById("configForm").onsubmit = async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(e.target);
+            const config = {};
+
+            for (let [key, value] of formData.entries()) {
+                const parts = key.split(".");
+                if (parts.length === 2) {
+                    const [section, subkey] = parts;
+                    if (!(section in config)) config[section] = {};
+                    config[section][subkey] = isNaN(value) ? value : parseFloat(value);
+                } else {
+                    config[key] = isNaN(value) ? value : parseFloat(value);
+                }
+            }
+                    
+
+
+
+            const response = await fetch("/run", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(config)
+            });
+            const data = await response.json();
+            document.getElementById("results").innerText = data.output;
+        };
+
+        async function viewConfig() {
+            const response = await fetch("/view-config");
+            const configText = await response.text();
+            document.getElementById("results").innerText = configText;
+        }
+    </script>
+</body>
+
+</html>
