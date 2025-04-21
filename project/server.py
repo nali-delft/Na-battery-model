@@ -82,5 +82,9 @@ def view_config():
     else:
         return "project/config.yaml did not generate"
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("FLASK_RUN_PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
